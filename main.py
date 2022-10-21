@@ -1,5 +1,6 @@
 # -*- coding: utf8 -*-
 import requests, time, datetime, re,sys, json, random
+import datetime
 
 # 设置开始
 # 用户名（格式为 13800138000）
@@ -102,6 +103,8 @@ def getBeijinTime():
     if r.status_code == 200:
         result = r.text
         print(result)
+        current_time = datetime.datetime.now()
+        print("current_time:    " + str(current_time))
         if "nhrs=" + str(time_list[0]) in result:
             a = set_push[0]
             min_1 = min_dict[time_list[0]]
