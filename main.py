@@ -164,7 +164,8 @@ def getBeijinTime():
                run(msg_mi)
             else:
                print("此次修改结果不推送")
-    else:
+    else:            elif "暴雨" in res['data']['list'][0]['weather']:
+
         print("当前不是主人设定的提交步数时间或者主人设置了0步数呢，本次不提交")
         return
 
