@@ -70,7 +70,8 @@ def getWeather():
             res = json.loads(result)
             if "多云" in res['data']['list'][0]['weather']:
                 K = K_dict["多云"]
-            elif "阴" in res['data']['list'][0]['weather']:
+            elif "阴" in res['data']['list'][0]['weather']:# 设置开始
+
                 K = K_dict["阴"]
             elif "小雨" in res['data']['list'][0]['weather']:
                 K = K_dict["小雨"]
