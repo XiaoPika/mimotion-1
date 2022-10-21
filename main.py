@@ -101,7 +101,7 @@ def getBeijinTime():
     r = requests.get(url=url, headers=hea)
     if r.status_code == 200:
         result = r.text
-        #print(result)
+        print(result)
         if "nhrs=" + str(time_list[0]) in result:
             a = set_push[0]
             min_1 = min_dict[time_list[0]]
